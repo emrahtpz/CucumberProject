@@ -32,7 +32,7 @@ public class Driver {
             synchronized (Driver.class) {
             /*
             We read our browser type from configuration.properties file using
-            .getProperty method we creating in ConfigurationReader class.
+            .getProperty method we're creating in ConfigurationReader class.
              */
                 String browserType = ConfigurationReader.getProperty("browser");
 
