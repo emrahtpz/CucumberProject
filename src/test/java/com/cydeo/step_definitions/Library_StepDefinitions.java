@@ -24,4 +24,13 @@ public class Library_StepDefinitions {
         System.out.println("User sees the library app dashboard");
     }
 
+    @When("user enters student username")
+    public void user_enters_student_username() {
+        System.out.println("User enters student username");
+    }
+    @When("user enters student password")
+    public void user_enters_student_password() {
+        System.out.println("User enters student password");
+    }
+
 }
