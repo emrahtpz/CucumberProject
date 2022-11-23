@@ -18,6 +18,7 @@ public class Etsy_StepDefinitions {
         Driver.getDriver().get(url);
 
     }
+
     @Then("user should see Etsy title as expected")
     public void user_should_see_etsy_title_as_expected() {
 
@@ -41,17 +42,15 @@ public class Etsy_StepDefinitions {
     public void user_clicks_the_search_button() {
 
         etsySearchPage.etsySearchButton.click();
-
-
     }
 
     @Then("user sees title is Wooden spoon - Etsy")
     public void user_sees_title_is_wooden_spoon_etsy() {
 
-        String expectedTitle = "Wooden spoon - Etsy";
+        String expectedTitle = "wooden spoon - Etsy";
         String actualTitle = Driver.getDriver().getTitle();
 
-        Assert.assertTrue("Title is not expected", actualTitle.equals(expectedTitle));
+        Assert.assertEquals("Title is not expected", actualTitle, expectedTitle);
 
     }
 }
