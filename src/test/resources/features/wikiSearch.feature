@@ -6,6 +6,6 @@ Feature: Wikipedia search functionality
   @wip
   Scenario: Wikipedia search functionality title verification
     Given user is on the Wikipedia home page
-    When user writes Steve Jobs in the wiki search box
+    When user writes "Steve Jobs" in the wiki search box
     And user clicks wiki search button
-    Then user sees Steve Jobs in the wiki title
+    Then user sees "Steve Jobs" in the wiki title
