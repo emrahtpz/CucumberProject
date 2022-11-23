@@ -17,7 +17,7 @@ Feature: Wikipedia search functionality
     Then user sees "Steve Jobs" in the main header
 
 
-  @wip
+
   Scenario: Wikipedia search functionality Image header verification
     Given user is on the Wikipedia home page
     When user writes "Steve Jobs" in the wiki search box
