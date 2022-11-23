@@ -1,5 +1,7 @@
 package com.cydeo.step_definitions;
 
+import com.cydeo.utilities.ConfigurationReader;
+import com.cydeo.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -7,6 +9,9 @@ import io.cucumber.java.en.When;
 public class Wikipedia_StepDefinitions {
     @Given("user is on the Wikipedia home page")
     public void user_is_on_the_wikipedia_home_page() {
+
+        String url = ConfigurationReader.getProperty("wikiUrl");
+        Driver.getDriver().get(url);
 
     }
     @When("user writes Steve Jobs in the wiki search box")
