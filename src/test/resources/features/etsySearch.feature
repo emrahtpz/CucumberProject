@@ -7,7 +7,7 @@ Feature: Etsy search feature
 
     #expected: Etsy Turkey - Shop for handmade, vintage, custom, and unique gifts for everyone
 
-  @wip
+
   Scenario: Etsy search functionality title verification
     Given user is on the Etsy landing page
     When use types Wooden spoon in the search bar
