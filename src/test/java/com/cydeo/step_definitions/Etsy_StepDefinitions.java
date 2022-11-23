@@ -1,9 +1,11 @@
 package com.cydeo.step_definitions;
 
+import com.cydeo.pages.EtsySearchPage;
 import com.cydeo.utilities.ConfigurationReader;
 import com.cydeo.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import org.junit.Assert;
 
 public class Etsy_StepDefinitions {
@@ -23,6 +25,33 @@ public class Etsy_StepDefinitions {
         String actualTitle = Driver.getDriver().getTitle();
 
         Assert.assertTrue("Title is not expected!", actualTitle.equals(expectedTitle));
+
+    }
+
+    EtsySearchPage etsySearchPage = new EtsySearchPage();
+
+    @When("use types Wooden spoon in the search bar")
+    public void use_types_wooden_spoon_in_the_search_bar() {
+
+        etsySearchPage.etsySearchBar.sendKeys("Wooden spoon");
+
+    }
+
+    @When("user clicks the search button")
+    public void user_clicks_the_search_button() {
+
+        etsySearchPage.etsySearchButton.click();
+
+
+    }
+
+    @Then("user sees title is Wooden spoon - Etsy")
+    public void user_sees_title_is_wooden_spoon_etsy() {
+
+        String expectedTitle = "Wooden spoon - Etsy";
+        String actualTitle = Driver.getDriver().getTitle();
+
+        Assert.assertTrue("Title is not expected", actualTitle.equals(expectedTitle));
 
     }
 }
