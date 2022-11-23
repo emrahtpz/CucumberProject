@@ -1,14 +1,14 @@
 Feature:  Examples of Cucumber data table implementation
 
 
-  @wip
+
   Scenario: Sometime happens
     #Given user does something
     Then user should see below words displayed
-      | Apple      |
-      | Kiwi       |
-      | Orange     |
-      | Strawberry |
-      | Mango      |
-      | Tomato     |
-      | Cucumber   |
+      | Apple      |21kg|
+      | Kiwi       |2kg|
+      | Orange     |3kg|
+      | Strawberry |3kg|
+      | Mango      |7kg|
+      | Tomato     |3kg|
+      | Cucumber   |4kg|
