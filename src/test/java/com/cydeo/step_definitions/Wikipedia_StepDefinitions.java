@@ -43,4 +43,24 @@ public class Wikipedia_StepDefinitions {
 
         Assert.assertEquals("Title is not same", actualTitle, expectedTitle);
     }
+
+    @Then("user sees {string} in the main header")
+    public void userSeesInTheMainHeader(String arg0) {
+
+        String expectedHeader = arg0;
+        String actualHeader = wikipediaSearchPage.mainHeader.getText();
+
+        Assert.assertEquals(expectedHeader,actualHeader);
+
+    }
+
+    @Then("user sees {string} in the image header")
+    public void userSeesInTheImageHeader(String arg0) {
+
+        String expectedImgHeader = arg0;
+        String actualImgHeader = wikipediaSearchPage.imageHeader.getText();
+
+        Assert.assertEquals(expectedImgHeader,actualImgHeader);
+
+    }
 }
